@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Seedchlogy — zen relaxation web app
 
-## Getting Started
+A calm, warm-toned Next.js experience: **breathing first**, then a conversational **AI guide** (optional) that suggests short relaxation activities from a fixed on-site library. This is **wellness-only**—not therapy or crisis care. See the in-app **Safety** page for disclaimers and crisis resources.
 
-First, run the development server:
+## Tech stack
+
+| Layer | Choice |
+| -------- | ------ |
+| Framework | [Next.js](https://nextjs.org/) 16 (App Router) |
+| UI | React 19, [Tailwind CSS](https://tailwindcss.com/) v4 |
+| Fonts | [Nunito Sans](https://fonts.google.com/specimen/Nunito+Sans) (UI), [Fraunces](https://fonts.google.com/specimen/Fraunces) (display) via `next/font` |
+| AI | OpenAI Chat Completions API (`gpt-4o-mini` by default) with JSON output; **offline heuristic fallback** when `OPENAI_API_KEY` is unset |
+| Content | Relaxation scripts live in [`src/lib/activities.ts`](src/lib/activities.ts) (grounding, PMR-lite, stretch, breath, visualization) |
+
+## Design tokens
+
+- **CSS variables** (colors, radii, motion): [`src/app/globals.css`](src/app/globals.css)
+- **Programmatic tokens** (durations, radii numbers): [`src/lib/tokens.ts`](src/lib/tokens.ts)
+
+Breathing pattern presets and phase math: [`src/lib/breathing.ts`](src/lib/breathing.ts) (slow ≈ 4-4-6 with 0s tail skipped; medium 4-1-4-1). Zero-second phases are omitted so timers stay correct.
+
+## Environment
+
+Create `.env.local`:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+OPENAI_API_KEY=sk-...
+# optional override:
+# OPENAI_MODEL=gpt-4o-mini
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Without a key, the chat API still returns supportive copy and suggestions using simple keyword routing.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm install
+npm run dev
+```
 
-## Learn More
+Open [http://localhost:3000](http://localhost:3000).
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build
+npm start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Routes
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `/` — Landing, crisis links, resume session hints
+- `/breathe` — Setup + guided breathing (orb / bar / text; pause; Space)
+- `/chat` — Warm assistant, chips, suggestion cards, “Why this?”
+- `/activity/[slug]` — Step-by-step activity player
+- `/safety` — Scope, AI disclosure, crisis resources
+- `/settings` — Optional forced reduced motion (stored in `localStorage`)
 
-## Deploy on Vercel
+## Product copy
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Centralized in [`src/lib/copy.ts`](src/lib/copy.ts) (positioning, crisis lines, microcopy).

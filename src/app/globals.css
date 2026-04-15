@@ -1,26 +1,83 @@
 @import "tailwindcss";
 
+/* Design tokens — warm zen palette, radii, motion (handoff: pair with src/lib/tokens.ts) */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-paper: #f7f3ee;
+  --color-paper-elevated: #f0ebe3;
+  --color-stone: #3d3832;
+  --color-stone-muted: #6b645c;
+  --color-accent: #c17f6a;
+  --color-accent-hover: #a86b58;
+  --color-accent-soft: #e8d4cc;
+  --color-sage: #8fa396;
+  --color-sage-soft: #d8e3dc;
+  --color-warm-gold: #d4a574;
+  --color-crisis-link: #8b4a4a;
+  --color-crisis-bg: #f3e8e8;
+
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 28px;
+  --radius-full: 9999px;
+
+  --motion-breathe: 1200ms;
+  --motion-fade: 400ms;
+  --font-ui: var(--font-nunito), system-ui, sans-serif;
+  --font-display: var(--font-fraunces), Georgia, serif;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-background: var(--color-paper);
+  --color-foreground: var(--color-stone);
+  --font-sans: var(--font-ui);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-paper);
+  color: var(--color-stone);
+  font-family: var(--font-ui);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion-breathe: 0ms;
+    --motion-fade: 0ms;
+  }
+}
+
+/* Focus visible — warm ring */
+.font-display {
+  font-family: var(--font-display);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+.zen-card {
+  background: var(--color-paper-elevated);
+  border-radius: var(--radius-lg);
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.5),
+    0 4px 24px rgb(61 56 50 / 0.06);
+}
+
+.zen-button-primary {
+  background: var(--color-accent);
+  color: #fffdf9;
+  border-radius: var(--radius-full);
+  transition: background var(--motion-fade) ease;
+}
+.zen-button-primary:hover {
+  background: var(--color-accent-hover);
+}
+
+.zen-button-ghost {
+  background: transparent;
+  color: var(--color-stone-muted);
+  border-radius: var(--radius-full);
+}
+.zen-button-ghost:hover {
+  background: rgb(193 127 106 / 0.12);
+  color: var(--color-stone);
 }
