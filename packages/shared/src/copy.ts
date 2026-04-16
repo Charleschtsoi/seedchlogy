@@ -49,11 +49,31 @@ export const mobileHome = {
   aboutThisApp: "About this app",
   safetyFullPage: "Open full safety & scope page",
   setupSummaryPrefix: "Your session:",
+  meditationCta: "Sit quietly for a few minutes",
 } as const;
 
 export const mobileMore = {
   safetySubtitle: "Crisis resources, privacy note, and what we don’t do",
   settingsSubtitle: "Motion and display preferences",
+  meditationSubtitle: "Quiet timer over a calm scene",
+} as const;
+
+/** Stillness / simple meditation timer (mobile) */
+export const meditationCopy = {
+  stillnessTitle: "Stillness",
+  helper:
+    "Choose how long you’d like to sit. Nothing here needs to be earned.",
+  lengthLabel: "Minutes",
+  min5: "5",
+  min10: "10",
+  min15: "15",
+  begin: "Begin",
+  pause: "Pause",
+  resume: "Resume",
+  endSession: "End session",
+  completeTitle: "You stayed—with yourself.",
+  completeBody: "There’s nothing more you have to do here.",
+  done: "Back",
 } as const;
 
 export const breathingCopy = {

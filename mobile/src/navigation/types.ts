@@ -5,6 +5,7 @@ import type { BottomTabScreenProps } from "@react-navigation/bottom-tabs";
 export type RootStackParamList = {
   Main: undefined;
   Activity: { slug: string };
+  Meditation: undefined;
 };
 
 export type MainTabParamList = {

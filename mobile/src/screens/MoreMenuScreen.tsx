@@ -1,14 +1,23 @@
 import { Pressable, StyleSheet, Text, View } from "react-native";
+import type { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import type { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { mobileMore } from "@seedchlogy/shared";
 import type { MoreStackParamList } from "../navigation/types";
+import type { RootStackParamList } from "../navigation/types";
 import { colors, space, typography } from "../theme";
 
 export function MoreMenuScreen({
   navigation,
 }: NativeStackScreenProps<MoreStackParamList, "MoreMenu">) {
   const insets = useSafeAreaInsets();
+  const openMeditation = () => {
+    const directRoot = navigation.getParent<NativeStackNavigationProp<RootStackParamList>>();
+    const parentTab = navigation.getParent();
+    const nestedRoot = parentTab?.getParent<NativeStackNavigationProp<RootStackParamList>>();
+    const targetNav = directRoot ?? nestedRoot;
+    targetNav?.navigate("Meditation");
+  };
   return (
     <View style={[styles.wrap, { paddingTop: insets.top + 16 }]}>
       <Text style={typography.title}>More</Text>
@@ -32,6 +41,16 @@ export function MoreMenuScreen({
         <View style={styles.rowLabels}>
           <Text style={styles.rowText}>Preferences</Text>
           <Text style={styles.rowSub}>{mobileMore.settingsSubtitle}</Text>
+        </View>
+        <Text style={styles.chev}>›</Text>
+      </Pressable>
+      <Pressable
+        style={styles.row}
+        onPress={openMeditation}
+      >
+        <View style={styles.rowLabels}>
+          <Text style={styles.rowText}>Stillness</Text>
+          <Text style={styles.rowSub}>{mobileMore.meditationSubtitle}</Text>
         </View>
         <Text style={styles.chev}>›</Text>
       </Pressable>

@@ -137,6 +137,13 @@ export function HomeScreen({ navigation }: MainTabScreenProps<"Home">) {
           onPress={() => navigation.navigate("Guide")}
           style={{ marginTop: space.sm }}
         />
+        <SecondaryButton
+          title={mobileHome.meditationCta}
+          onPress={() => navigation.navigate("Meditation")}
+          style={{ marginTop: space.xs }}
+          textStyle={{ textDecorationLine: "underline" }}
+          accessibilityLabel={mobileHome.meditationCta}
+        />
       </View>
 
       <ExpandableSection

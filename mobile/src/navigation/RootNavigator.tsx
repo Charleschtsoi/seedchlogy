@@ -6,6 +6,7 @@ import { BreatheScreen } from "../screens/BreatheScreen";
 import { ChatScreen } from "../screens/ChatScreen";
 import { HomeScreen } from "../screens/HomeScreen";
 import { ActivityScreen } from "../screens/ActivityScreen";
+import { MeditationScreen } from "../screens/MeditationScreen";
 import { MoreMenuScreen } from "../screens/MoreMenuScreen";
 import { SafetyScreen } from "../screens/SafetyScreen";
 import { SettingsScreen } from "../screens/SettingsScreen";
@@ -149,6 +150,16 @@ export function RootNavigator() {
         name="Activity"
         component={ActivityScreen}
         options={{ title: "Activity" }}
+      />
+      <RootStack.Screen
+        name="Meditation"
+        component={MeditationScreen}
+        options={{
+          title: "Stillness",
+          headerTransparent: true,
+          headerTintColor: colors.white,
+          headerTitleStyle: { color: colors.white, ...titleFont },
+        }}
       />
     </RootStack.Navigator>
   );
