@@ -2,16 +2,26 @@
   "name": "seedchlogy",
   "version": "0.1.0",
   "private": true,
+  "workspaces": [
+    "packages/*",
+    "mobile"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "mobile": "npm run start --workspace=mobile"
   },
   "dependencies": {
+    "@seedchlogy/shared": "file:./packages/shared",
     "next": "16.2.3",
-    "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
+  },
+  "overrides": {
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

@@ -37,7 +37,23 @@ export const landing = {
   primaryCta: "Start with about a minute of breathing",
   secondaryCta: "That’s okay—want to talk first?",
   resumeBreathing: "Continue breathing",
-  resumeChat: "Pick up where you left off",
+  resumeChat: "Pick up where we left off",
+} as const;
+
+/** Short labels for mobile progressive disclosure */
+export const mobileHome = {
+  continueMicroLabel: "Continue",
+  ifYouNeedUrgentHelp: "If you need urgent help",
+  crisisPeek:
+    "988, Crisis Text Line, and international resources. Tap a link to open.",
+  aboutThisApp: "About this app",
+  safetyFullPage: "Open full safety & scope page",
+  setupSummaryPrefix: "Your session:",
+} as const;
+
+export const mobileMore = {
+  safetySubtitle: "Crisis resources, privacy note, and what we don’t do",
+  settingsSubtitle: "Motion and display preferences",
 } as const;
 
 export const breathingCopy = {
@@ -80,7 +96,7 @@ export const chatCopy = {
   notForMe: "Not for me—try another",
   moreDetail: "More detail",
   crisisBanner:
-    "It sounds like you might be in crisis. If you’re unsafe, please use the resources on our Safety page.",
+    "It sounds like you might be in crisis. If you’re unsafe, please use the resources on our Safety screen.",
 } as const;
 
 export const activityCopy = {

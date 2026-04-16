@@ -1,4 +1,4 @@
-import { ACTIVITIES, ACTIVITY_IDS, type ActivitySlug } from "@/lib/activities";
+import { ACTIVITIES, ACTIVITY_IDS, type ActivitySlug } from "@seedchlogy/shared";
 import { NextResponse } from "next/server";
 
 export const runtime = "nodejs";

@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* Design tokens — warm zen palette, radii, motion (handoff: pair with src/lib/tokens.ts) */
+/* Design tokens — warm zen palette, radii, motion (pair with packages/shared/src/tokens.ts) */
 :root {
   --color-paper: #f7f3ee;
   --color-paper-elevated: #f0ebe3;

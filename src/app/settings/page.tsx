@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { ZenShell } from "@/components/ZenShell";
-import { settingsCopy } from "@/lib/copy";
+import { settingsCopy } from "@seedchlogy/shared";
 import { useForceReducedMotion } from "@/lib/reduced-motion-preference";
 
 export default function SettingsPage() {

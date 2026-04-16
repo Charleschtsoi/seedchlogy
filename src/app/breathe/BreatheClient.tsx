@@ -3,8 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { BreathingExperience, type VisualStyle } from "@/components/BreathingExperience";
-import { breathingCopy, positioning } from "@/lib/copy";
-import type { Pace } from "@/lib/breathing";
+import { breathingCopy, positioning, type Pace } from "@seedchlogy/shared";
 
 type Step = "setup" | "session" | "done";
 

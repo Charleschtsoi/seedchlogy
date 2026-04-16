@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ZenShell } from "@/components/ZenShell";
-import { crisis, positioning, SITE_NAME } from "@/lib/copy";
+import { crisis, positioning, SITE_NAME } from "@seedchlogy/shared";
 
 export default function SafetyPage() {
   return (

@@ -23,7 +23,9 @@ export function cycleDurationSeconds(pace: Pace): number {
   return p.inhale + p.holdIn + p.exhale + p.holdOut;
 }
 
-export function phasesForPace(pace: Pace): { phase: BreathPhase; seconds: number }[] {
+export function phasesForPace(
+  pace: Pace,
+): { phase: BreathPhase; seconds: number }[] {
   const p = PACE_PRESETS[pace];
   return [
     { phase: "inhale", seconds: p.inhale },

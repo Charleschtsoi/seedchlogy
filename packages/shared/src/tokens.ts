@@ -1,6 +1,5 @@
 /**
- * Design tokens — programmatic values. CSS variables live in globals.css.
- * Durations in ms; radii in px.
+ * Design tokens — programmatic values. Web uses globals.css; mobile uses theme.ts.
  */
 export const tokens = {
   motion: {

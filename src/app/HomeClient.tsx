@@ -2,7 +2,7 @@
 
 import { useMemo } from "react";
 import Link from "next/link";
-import { crisis, landing, positioning, SITE_NAME } from "@/lib/copy";
+import { crisis, landing, positioning, SITE_NAME } from "@seedchlogy/shared";
 import { useSessionSnapshot } from "@/lib/session-storage";
 
 const ROTATING = [

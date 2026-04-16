@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { SITE_NAME } from "@/lib/copy";
+import { SITE_NAME } from "@seedchlogy/shared";
 
 export function ZenShell({ children }: { children: React.ReactNode }) {
   return (

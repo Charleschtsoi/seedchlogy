@@ -2,8 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { chatCopy } from "@/lib/copy";
-import type { Activity } from "@/lib/activities";
+import { chatCopy, type Activity } from "@seedchlogy/shared";
 
 export type EnrichedSuggestion = {
   activityId: string;

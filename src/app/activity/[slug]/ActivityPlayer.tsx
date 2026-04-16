@@ -2,8 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { activityCopy } from "@/lib/copy";
-import type { Activity } from "@/lib/activities";
+import { activityCopy, type Activity } from "@seedchlogy/shared";
 
 export function ActivityPlayer({ activity }: { activity: Activity }) {
   const [step, setStep] = useState(0);

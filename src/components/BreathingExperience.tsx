@@ -2,9 +2,12 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
-import type { BreathPhase, Pace } from "@/lib/breathing";
-import { phasesForPace } from "@/lib/breathing";
-import { breathingCopy } from "@/lib/copy";
+import {
+  breathingCopy,
+  phasesForPace,
+  type BreathPhase,
+  type Pace,
+} from "@seedchlogy/shared";
 import {
   FORCE_REDUCED_MOTION_KEY,
   REDUCED_MOTION_SYNC_EVENT,

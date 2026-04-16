@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Fraunces, Nunito_Sans } from "next/font/google";
 import { ZenMotionInit } from "@/components/ZenMotionInit";
-import { SITE_NAME, positioning } from "@/lib/copy";
+import { SITE_NAME, positioning } from "@seedchlogy/shared";
 import "./globals.css";
 
 const nunito = Nunito_Sans({

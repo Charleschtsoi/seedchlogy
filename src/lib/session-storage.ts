@@ -1,15 +1,12 @@
 "use client";
 
+import type { SessionSnapshot } from "@seedchlogy/shared";
 import { useSyncExternalStore } from "react";
 
 const PREFIX = "seedchlogy:zen:";
 export const SESSION_SYNC_EVENT = "seedchlogy-session";
 
-export type SessionSnapshot = {
-  lastPath: "/breathe" | "/chat" | "/";
-  breatheInProgress?: boolean;
-  updatedAt: number;
-};
+export type { SessionSnapshot };
 
 let sessionCache: SessionSnapshot | null = null;
 let sessionRawCache: string | null = null;

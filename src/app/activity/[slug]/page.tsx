@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { ZenShell } from "@/components/ZenShell";
-import { getActivity } from "@/lib/activities";
+import { getActivity } from "@seedchlogy/shared";
 import { ActivityPlayer } from "./ActivityPlayer";
 
 type Props = { params: Promise<{ slug: string }> };

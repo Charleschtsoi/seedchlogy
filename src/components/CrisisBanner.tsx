@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { chatCopy } from "@/lib/copy";
+import { chatCopy } from "@seedchlogy/shared";
 
 export function CrisisBanner() {
   return (

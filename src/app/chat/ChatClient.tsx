@@ -5,7 +5,7 @@ import { AiDisclosure } from "@/components/AiDisclosure";
 import { CrisisBanner } from "@/components/CrisisBanner";
 import { LatencyCalm } from "@/components/LatencyCalm";
 import { SuggestionCard, type EnrichedSuggestion } from "@/components/SuggestionCard";
-import { chatCopy, positioning } from "@/lib/copy";
+import { chatCopy, positioning } from "@seedchlogy/shared";
 import { saveSession } from "@/lib/session-storage";
 
 type ChatMessage = { role: "user" | "assistant"; content: string };

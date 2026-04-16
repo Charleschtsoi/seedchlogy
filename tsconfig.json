@@ -19,7 +19,9 @@
       }
     ],
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@seedchlogy/shared": ["./packages/shared/src/index.ts"],
+      "@seedchlogy/shared/*": ["./packages/shared/src/*"]
     }
   },
   "include": [

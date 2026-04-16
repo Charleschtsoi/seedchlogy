@@ -1,4 +1,4 @@
-import { positioning } from "@/lib/copy";
+import { positioning } from "@seedchlogy/shared";
 
 export function AiDisclosure({ usedAi }: { usedAi?: boolean }) {
   return (
