@@ -76,6 +76,41 @@ export const meditationCopy = {
   done: "Back",
 } as const;
 
+export const moodCopy = {
+  title: "Mood check-in",
+  prompt: "Pick a mood. If you want, add a couple words about this moment.",
+  notePlaceholder: "A couple words is enough…",
+  labelPickMood: "How do you feel right now?",
+  saveCheckIn: "Save check-in",
+  savedTitle: "Saved",
+  savedBody: "Want to capture a gentle memory from this moment?",
+  nextSaveMemory: "Save a Memory",
+  lastCheckIns: "Recent check-ins",
+  noCheckIns: "No check-ins yet. Your first one can be simple.",
+  openMemoryJar: "Open Memory Jar",
+  moods: ["Steady", "Tense", "Anxious", "Sad", "Overwhelmed", "Hopeful"] as const,
+} as const;
+
+export const memoryJarCopy = {
+  title: "Memory Jar",
+  helper:
+    "A few slow notes can help you carry this moment with care—no analysis required.",
+  sectionNotice: "What do you notice?",
+  sectionNextMoment: "What do you need from your next moment?",
+  sectionKindAction: "One kind action for your body",
+  placeholderNotice: "What stands out…",
+  placeholderNextMoment: "What would feel supportive right now…",
+  placeholderKindAction: "A small, kind action you can do today…",
+  saveMemory: "Save memory",
+  savedToast: "Saved for later",
+  completionTitle: "This moment is held",
+  completionBody:
+    "You did something gentle for yourself. When you’re ready, you can come back to this memory.",
+  recentMemories: "Recent memories",
+  noMemories: "No saved memories yet. Your first one can be simple.",
+  ifDangerTitle: "If you might be in danger",
+} as const;
+
 export const breathingCopy = {
   setupTitle: "Before we begin",
   postureSitting: "Sitting",

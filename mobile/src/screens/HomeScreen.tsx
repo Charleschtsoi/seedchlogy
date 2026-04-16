@@ -13,6 +13,7 @@ import {
   crisis,
   landing,
   mobileHome,
+  moodCopy,
   positioning,
   SITE_NAME,
 } from "@seedchlogy/shared";
@@ -143,6 +144,13 @@ export function HomeScreen({ navigation }: MainTabScreenProps<"Home">) {
           style={{ marginTop: space.xs }}
           textStyle={{ textDecorationLine: "underline" }}
           accessibilityLabel={mobileHome.meditationCta}
+        />
+        <SecondaryButton
+          title={moodCopy.title}
+          onPress={() => navigation.navigate("MoodCheckIn")}
+          style={{ marginTop: space.xs }}
+          textStyle={{ textDecorationLine: "underline" }}
+          accessibilityLabel={moodCopy.title}
         />
       </View>
 

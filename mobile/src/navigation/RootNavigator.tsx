@@ -7,6 +7,8 @@ import { ChatScreen } from "../screens/ChatScreen";
 import { HomeScreen } from "../screens/HomeScreen";
 import { ActivityScreen } from "../screens/ActivityScreen";
 import { MeditationScreen } from "../screens/MeditationScreen";
+import { MoodCheckInScreen } from "../screens/MoodCheckInScreen";
+import { MemoryJarScreen } from "../screens/MemoryJarScreen";
 import { MoreMenuScreen } from "../screens/MoreMenuScreen";
 import { SafetyScreen } from "../screens/SafetyScreen";
 import { SettingsScreen } from "../screens/SettingsScreen";
@@ -156,6 +158,26 @@ export function RootNavigator() {
         component={MeditationScreen}
         options={{
           title: "Stillness",
+          headerTransparent: true,
+          headerTintColor: colors.white,
+          headerTitleStyle: { color: colors.white, ...titleFont },
+        }}
+      />
+      <RootStack.Screen
+        name="MoodCheckIn"
+        component={MoodCheckInScreen}
+        options={{
+          title: "Mood check-in",
+          headerTransparent: true,
+          headerTintColor: colors.white,
+          headerTitleStyle: { color: colors.white, ...titleFont },
+        }}
+      />
+      <RootStack.Screen
+        name="MemoryJar"
+        component={MemoryJarScreen}
+        options={{
+          title: "Memory Jar",
           headerTransparent: true,
           headerTintColor: colors.white,
           headerTitleStyle: { color: colors.white, ...titleFont },

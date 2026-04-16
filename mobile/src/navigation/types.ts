@@ -6,6 +6,8 @@ export type RootStackParamList = {
   Main: undefined;
   Activity: { slug: string };
   Meditation: undefined;
+  MoodCheckIn: undefined;
+  MemoryJar: undefined;
 };
 
 export type MainTabParamList = {
